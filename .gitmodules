@@ -1,0 +1,3 @@
+[submodule "ums-library"]
+	path = ums-library
+	url = https://github.com/wilever/ums-library.git
