@@ -1,0 +1,19 @@
+# Properties for test deploy
+# Enable database on memory
+spring:
+  datasource:
+    url:
+      jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+# Generate a random datasource name
+    generate-unique-name:
+      true
+# Hibernate dialect
+  jpa:
+    properties:
+      hibernate:
+        dialect:
+          org.hibernate.dialect.H2Dialect
+# Create entities
+    hibernate:
+      ddl-auto:
+        create-drop

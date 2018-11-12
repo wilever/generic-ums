@@ -1,0 +1,20 @@
+# Properties for develop deploy
+# Parameters of connection to database
+spring:
+  datasource:
+    url: 
+      ${JDBC_DATABASE_URL:jdbc:postgresql://localhost:5432/generic-ums-db?ssl=false}
+    username:
+      ${JDBC_DATABASE_USERNAME:postgres}
+    password:
+      ${JDBC_DATABASE_PASSWORD:postgres}
+    data:
+      classpath:test-data.sql
+  jpa:
+    properties:
+       hibernate:
+         dialect:
+           org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: 
+        update
